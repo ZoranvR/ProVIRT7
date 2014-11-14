@@ -1,0 +1,12 @@
+http://linux.die.net/man/1/virsh
+
+https://help.ubuntu.com/community/KVM/Installation
+
+https://help.ubuntu.com/community/KVM/Virsh
+
+http://virt-tools.org/learning/start-virt-tools/
+
+http://libvirt.org/formatnetwork.html
+
+http://libvirt.org/docs.html
+
