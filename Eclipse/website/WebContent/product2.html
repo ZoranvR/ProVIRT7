@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<title>Plaintech</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/plaintech.css">
+<link rel="stylesheet" href="css/magnific-popup.css">
+<script src="js/vendor/custom.modernizr.js"></script>
+<!-- dojo components-->
+<link rel="stylesheet" href="dijit/themes/claro/claro.css">
+	
+	<script>dojoConfig = {parseOnLoad: true, async:true}</script>
+	<script src='dojo/dojo.js'></script>
+	
+	<script>
+require(["dojo/parser", "dijit/form/HorizontalSlider", "dijit/form/HorizontalRule", "dijit/form/HorizontalRuleLabels"]);
+	</script>
+
+
+</head>
+<body>
+<header class="contain-to-grid">
+  <div class="row">
+    <div class="large-12 column">
+      <nav id="menu" class="top-bar">
+        <ul class="title-area">
+          <li class="name"><a href="index.html"><img src="images/logo.png" alt="logo"></a></li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Select Gold</span></a></li>
+        </ul>
+        <section class="top-bar-section">
+          <ul class="right">
+            <li class="active"><a href="plans.html">PLANS &amp; PRICING</a></li>
+            
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="support.html">SUPPORT</a></li>
+            <li><a href="login.html">LOG IN</a></li>
+            <li id="signup"><a href="signup.html" class="button no-margin">SIGN UP</a></li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+  </div>
+</header>
+<section id="main" role="main">
+  <div class="breadcrumb-container">
+    <div class="row">
+      <div class="large-12 column">
+        <nav class="breadcrumbs animated bounceInDown"><a href="index.html">Home</a> <a class="current" href="#">Plans & Pricing</a></nav>
+      </div>
+    </div>
+  </div>
+  <section id="shared" class="part">
+    <div class="row title">
+      <div class="large-12 column">
+        <h6>Server Hosting</h6>
+        <p>It's possible to change your system preferences, the default values are the package you just chose.</p>
+        <h4> vCPU <h4>
+  	  <div class="claro">
+    <div id="CpuSlider"
+    style="width:600px;"
+    name="RamSlider"
+    data-dojo-type="dijit/form/HorizontalSlider"
+    data-dojo-props="value:2,
+    minimum: 1,
+    maximum: 3,
+    discreteValues:3,
+    intermediateChanges:true,
+    showButtons:false">
+    <div data-dojo-type="dijit/form/HorizontalRule" container="bottomDecoration"
+        count=3 style="height:5px;"></div>
+    <ol data-dojo-type="dijit/form/HorizontalRuleLabels" container="bottomDecoration"
+        style="height:1em;font-size:75%;color:gray;">
+        <li>2vCPU</li>
+        <li>3vCPU</li>
+        <li>4vCPU</li>
+    </ol>
+</div>
+</div>
+        <h4> RAM <h4>
+  	  <div class="claro">
+    <div id="RamSlider"
+    style="width:600px;"
+    name="RamSlider"
+    data-dojo-type="dijit/form/HorizontalSlider"
+    data-dojo-props="value:3,
+    minimum: 1,
+    maximum: 5,
+    discreteValues:5,
+    intermediateChanges:true,
+    showButtons:false">
+    <div data-dojo-type="dijit/form/HorizontalRule" container="bottomDecoration"
+        count=5 style="height:5px;"></div>
+    <ol data-dojo-type="dijit/form/HorizontalRuleLabels" container="bottomDecoration"
+        style="height:1em;font-size:75%;color:gray;">
+        <li>1024MB</li>
+        <li>2048MB</li>
+        <li>4096MB</li>
+        <li>8096MB</li>
+        <li>16348MB</li>
+    </ol>
+</div>
+</div>
+ <h4> HDD <h4>
+  	  <div class="claro">
+    <div id="HddSlider"
+    style="width:600px;"
+    name="HddSlider"
+    data-dojo-type="dijit/form/HorizontalSlider"
+    data-dojo-props="value:5,
+    minimum: 1,
+    maximum: 10,
+    discreteValues:10,
+    intermediateChanges:true,
+    showButtons:false">
+    <div data-dojo-type="dijit/form/HorizontalRule" container="bottomDecoration"
+        count=10 style="height:5px;"></div>
+    <ol data-dojo-type="dijit/form/HorizontalRuleLabels" container="bottomDecoration"
+        style="height:1em;font-size:75%;color:gray;">
+        <li>100GB</li>
+        <li>200GB</li>
+        <li>300GB</li>
+        <li>400GB</li>
+        <li>500GB</li>
+        <li>600GB</li>
+        <li>700GB</li>
+        <li>800GB</li>
+        <li>900GB</li>
+        <li>1TB</li>
+    </ol>
+</div>
+</div>
+      </div>
+    </div>
+  </section>
+    <section class="part">
+    <div class="row title">
+      <div class="large-12 column">
+        <h6>Pick a Service Level Agreement (SLA) <br>
+        You've selected:
+        <h4 id="selected"></h4></h6>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 column">
+        <div class="row">
+          <div class="large-4 column">
+            <ul class="pricing-table">
+              <li class="title">SLA-Silver</li>
+              <li class="price">€45,- <span>/ month</span></li>
+              <li class="bullet-item"><strong>Monthly</strong> updates</li>
+              <li class="bullet-item"><strong>Monthly</strong>  system checks</li>
+              <li class="bullet-item"><strong>20 Hour</strong> response time</li>
+              <li class="bullet-item"><strong>30 Minutes</strong> support time</li>
+              <li class="bullet-item"><strong>Maintenance</strong> during office hours</li>
+              <li class="bullet-item"><br></li>
+              
+              <li class="cta-button"><button id="SLA1" value="Silver" onclick="myFunction1()">Select Silver</button>
+
+				<script>
+					function myFunction1() {
+  					var x = document.getElementById("SLA1").value;
+    				document.getElementById("selected").innerHTML = x;
+					}
+				</script>
+		      </li>
+            </ul>
+          </div>
+          <div class="large-4 column">
+            <ul class="pricing-table highlight">
+            <li class="title">SLA-Gold</li>
+              <li class="price">€80,- <span>/ month</span></li>
+              <li class="bullet-item"><strong>Monthly</strong> updates</li>
+              <li class="bullet-item"><strong>Monthly</strong>  system checks</li>
+              <li class="bullet-item"><strong>8 Hour</strong> response time</li>
+              <li class="bullet-item"><strong>1 Hour</strong> support time</li>
+              <li class="bullet-item"><strong>Daily</strong> back-ups</li>
+              <li class="bullet-item"><strong>Maintenance</strong> at night</li>
+              
+              <li class="cta-button"><button id="SLA2" value="Gold" onclick="myFunction2()">Select Gold</button>
+
+				<script>
+					function myFunction2() {
+   					 var x = document.getElementById("SLA2").value;
+   					document.getElementById("selected").innerHTML = x;
+					}
+				</script>
+			  </li>
+            </ul>
+          </div>
+          <div class="large-4 column">
+            <ul class="pricing-table">
+            <li class="title">SLA-Platinum</li>
+              <li class="price">€140,- <span>/ month</span></li>
+              <li class="bullet-item"><strong>Monthly</strong> updates</li>
+              <li class="bullet-item"><strong>Monthly</strong>  system checks</li>
+              <li class="bullet-item"><strong>30 Minute</strong> response time</li>
+              <li class="bullet-item"><strong>24 Hours</strong> support time</li>
+              <li class="bullet-item"><strong>Daily</strong> back-ups</li>
+              <li class="bullet-item"><strong>Maintenance</strong> at night</li>
+              
+              <li class="cta-button"><button id="SLA3" value="Platinum" onclick="myFunction3()">Select Platinum</button>
+
+				<script>
+					function myFunction3() {
+   					 var x = document.getElementById("SLA3").value;
+   					document.getElementById("selected").innerHTML = x;
+					}
+				</script>
+			  </li>
+</ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<a id="back-top" href="#"><i class="icon-caret-up"></i></a>
+<footer>
+  <div class="row spacy">
+    <div class="large-6 column">
+      <h4>About us</h4>
+      <p>Plaintech UK is an internationally operating organization with its main headquarters in Birmingham 
+(UK). One division of Plaintech is based in the Netherlands.. Plaintech has decades of experience in the hosting business, and will therefore offer the best user experience.</p>
+    </div>
+    <div class="large-2 column">
+      <h4>Services</h4>
+      <ul class="side-nav">
+        <li><a href="plans.html#shared">Server Hosting</a></li>
+        <li><a href="about.html">About us</a></li>
+        
+      </ul>
+    </div>
+    <div class="large-4 column">
+      <h4>Contact</h4>
+      <div class="row">
+        <div class="small-3 column">
+          <h6>Address:</h6>
+        </div>
+        <div class="small-9 column">
+          <p>Duivendrechtsekade 36-38 | 1096 AH Amsterdam</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-3 column text">
+          <h6>Phone:</h6>
+        </div>
+        <div class="small-9 column text">
+          <p>+31631917982</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-3 column text">
+          <h6>Email:</h6>
+        </div>
+        <div class="small-9 column text">
+          <p><a href="mailto:info@plaintech.com">info@plaintech.com</a><br>
+            <a href="mailto:info@plaintech.com">support@plaintech.com</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 column">
+      <hr>
+    </div>
+  </div>
+  <div class="row">
+    <p class="small-12 large-4 large-uncentered column copyright">Copyright &copy; 2014 Plaintech.</p> 
+  </div>
+</footer>
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/jquery.magnific-popup.js"></script>
+<script src="js/plaintech.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>
