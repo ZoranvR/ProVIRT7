@@ -1,0 +1,27 @@
+<domain type='kvm'>
+  <name>!NAME</name>
+ <uuid>c7a5fdbd-cdaf-9455-926a-d65c16db1809</uuid>
+  <memory unit='M'>!MEMORY</memory>
+  <currentMemory unit='M'>!MEMORY</currentMemory>
+  <vcpu>!VCPU</vcpu>
+  <os>
+    <type arch='x86_64' machine='pc-1.1'>hvm</type>
+    <boot dev='hd'/>
+  </os>
+  <devices>
+    <emulator>/usr/bin/kvm</emulator>
+    <disk type='file' device='disk'>
+      <source file='/var/lib/libvirt/images/'/>
+      <target dev='hdc'/>
+      <readonly/>
+    </disk>
+    <disk type='file' device='disk'>
+      <source file='/home/user/fedora.img'/>
+      <target dev='hda'/>
+    </disk>
+    <interface type='bridge'>
+      <source bridge='br0'/>
+    </interface>
+    <graphics type='vnc' port='!PORT' autoport='no' listen='0.0.0.0' passwd='!PASSWORD'/>
+  </devices>
+</domain>
