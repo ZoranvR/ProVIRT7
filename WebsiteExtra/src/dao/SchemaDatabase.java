@@ -11,6 +11,7 @@ public class SchemaDatabase {
 		boolean st = false;
 		Connection conn = null;
 		try {
+			// Trying to make a connection and store it in conn
 			conn = Mysql.mysqlConn();
 			PreparedStatement ps = conn
 					.prepareStatement("select * from websiteusers where email=? and pass=?");
@@ -19,15 +20,18 @@ public class SchemaDatabase {
 			ResultSet rs = ps.executeQuery();
 			st = rs.next();
 			
+			// Close database connection
 			conn.close();
 
 		} catch (Exception e) {
-			
+			// Prints Exception
 			e.printStackTrace();
 		}
 		finally{
+			//  Close connection if it isn't closed yet.
 			if(conn != null) conn.close();
 		}
+		// Returns True or False for checklogin
 		return st;
 
 	}

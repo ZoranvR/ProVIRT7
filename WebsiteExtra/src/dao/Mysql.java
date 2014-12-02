@@ -17,9 +17,11 @@ public class Mysql {
 
 	
 	protected static Connection mysqlConn() throws Exception {
-		
+		// Loads database driver
 		Class.forName("com.mysql.jdbc.Driver");
+		// Checks if there is no connection already
 		if (conn != null){
+			// if their was a connection already returns this connection
 			return conn;
 		}
 		
@@ -32,6 +34,7 @@ public class Mysql {
 		catch(Exception e){
 			e.printStackTrace();
 		}
+		// returns connection to method
 		return conn;
 	}
 }
